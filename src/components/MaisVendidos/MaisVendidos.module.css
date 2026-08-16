@@ -1,0 +1,558 @@
+.section {
+  width: 100%;
+
+  padding: 50px 4%;
+
+  box-sizing: border-box;
+
+
+  font-family: "Fredoka", sans-serif;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+  width: 100%;
+
+  max-width: 1750px;
+
+  margin: 0 auto 26px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.titulo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.titulo h2 {
+  margin: 0;
+
+  color: #542d1c;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+.titulo h2 span {
+  color: #ff4d00;
+}
+
+
+
+.verTodos {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #542d1c;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+
+.verTodos span {
+  color: #ff4d00;
+
+  font-size: 28px;
+
+  line-height: 1;
+
+  transition: transform 0.25s ease;
+}
+
+
+.verTodos:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================
+   WRAPPER
+========================= */
+
+.carouselWrapper {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1750px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   CARROSSEL
+========================= */
+
+.carousel {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+.track {
+  display: flex;
+
+  gap: 18px;
+
+  will-change: transform;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  position: relative;
+
+  flex-grow: 0;
+
+  flex-shrink: 0;
+
+  height: 390px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  background-color: #fffaf5;
+
+  border: 1px solid rgba(109, 64, 41, 0.08);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 6px 20px
+    rgba(109, 64, 41, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 28px
+    rgba(109, 64, 41, 0.1);
+}
+
+
+.areaImagem {
+  width: 100%;
+  text-align: center;
+
+  height: 220px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.areaImagem img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  transition: transform 0.35s ease;
+}
+
+
+.card:hover .areaImagem img {
+  transform: scale(1.035);
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.informacoes {
+  flex: 1;
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  text-align: center;
+}
+
+
+.informacoes h3 {
+  width: 100%;
+
+  min-height: 42px;
+
+  margin: 0 0 6px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #542d1c;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+
+.informacoes strong {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #542d1c;
+
+  font-size: 19px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   EU QUERO
+========================= */
+
+.euQuero {
+  width: 100%;
+
+  height: 46px;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background-color: #ff4d00;
+
+  color: #ffffff;
+
+  font-family: "Fredoka", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.euQuero:hover {
+  background-color: #e94700;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 16px
+    rgba(255, 77, 0, 0.2);
+}
+
+
+.euQuero > span {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  line-height: 1;
+}
+
+
+.sacola {
+  font-family: Arial, sans-serif;
+
+  font-size: 20px;
+}
+
+
+/* =========================
+   SETAS
+========================= */
+
+.controle {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 50;
+
+  width: 50px;
+
+  height: 50px;
+
+  padding: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 50%;
+
+  background-color: #ff4d00;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 15px
+    rgba(109, 64, 41, 0.15);
+
+  transform: translateY(-50%);
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.controle span {
+  display: block;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 36px;
+
+  font-weight: 300;
+
+  line-height: 0.7;
+
+  transform: translateY(-1px);
+}
+
+
+.controle:hover {
+  background-color: #e94700;
+}
+
+
+.anterior {
+  left: -25px;
+}
+
+
+.proximo {
+  right: -25px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1450px) {
+
+  .card {
+    height: 380px;
+  }
+
+
+  .areaImagem {
+    height: 215px;
+  }
+
+}
+
+
+@media (max-width: 1100px) {
+
+  .section {
+    padding-left: 5%;
+
+    padding-right: 5%;
+  }
+
+
+  .titulo h2 {
+    font-size: 28px;
+  }
+
+
+  .controle {
+    width: 46px;
+
+    height: 46px;
+  }
+
+
+  .controle span {
+    font-size: 33px;
+  }
+
+
+  .anterior {
+    left: -20px;
+  }
+
+
+  .proximo {
+    right: -20px;
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .section {
+    padding-top: 40px;
+
+    padding-bottom: 40px;
+  }
+
+
+  .verTodos {
+    font-size: 14px;
+  }
+
+
+  .card {
+    height: 370px;
+  }
+
+
+  .areaImagem {
+    height: 210px;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .section {
+    padding: 35px 22px;
+  }
+
+
+  .cabecalho {
+    margin-bottom: 20px;
+  }
+
+
+  .titulo h2 {
+    font-size: 22px;
+  }
+
+
+
+  .verTodos {
+    gap: 6px;
+
+    font-size: 11px;
+  }
+
+
+  .verTodos span {
+    font-size: 20px;
+  }
+
+
+  .card {
+    height: 390px;
+  }
+
+
+  .areaImagem {
+    height: 235px;
+  }
+
+
+  .controle {
+    width: 42px;
+
+    height: 42px;
+  }
+
+
+  .controle span {
+    font-size: 30px;
+  }
+
+
+  .anterior {
+    left: -14px;
+  }
+
+
+  .proximo {
+    right: -14px;
+  }
+
+}

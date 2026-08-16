@@ -1,0 +1,360 @@
+.section {
+  position: relative;
+
+  width: 100%;
+  max-width: 1750px;
+
+  margin: 0 auto;
+
+  padding: 35px 40px 25px;
+
+  box-sizing: border-box;
+
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 27px;
+}
+
+
+.cabecalho h2 {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #542d1c;
+
+  font-size: 29px;
+  font-weight: 700;
+}
+
+
+.cabecalho h2 span {
+  color: #ff4d00;
+}
+
+
+.cabecalho h2 svg {
+  color: #ff4d00;
+
+  font-size: 31px;
+}
+
+
+.verTodos {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  color: #542d1c;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.verTodos span {
+  color: #ff4d00;
+
+  font-size: 25px;
+
+  transition: transform 0.25s ease;
+}
+
+
+.verTodos:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produtos {
+  position: relative;
+  z-index: 5;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  min-height: 280px;
+
+  display: grid;
+
+  grid-template-columns: 52% 48%;
+
+  background-color: #fffaf4;
+
+  border: 1px solid rgba(109, 64, 41, 0.1);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 30px
+    rgba(109, 64, 41, 0.1);
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.imagem {
+  width: 100%;
+  height: 100%;
+
+  min-height: 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f6dfc4;
+
+  overflow: hidden;
+}
+
+
+.imagem img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.4s ease;
+}
+
+
+.card:hover .imagem img {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.informacoes {
+  padding: 25px 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+.informacoes h3 {
+  margin: 0 0 7px;
+
+  color: #542d1c;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.detalhe {
+  color: #ff4d00;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.informacoes p {
+  margin: 12px 0 16px;
+
+  color: #6d4029;
+
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+
+.preco {
+  margin-bottom: 17px;
+
+  color: #542d1c;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.botao {
+  width: 100%;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background-color: #ff4d00;
+
+  color: #fff;
+
+  font-family: "Fredoka", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+
+.botao svg {
+  font-size: 18px;
+}
+
+
+.botao:hover {
+  background-color: #e94700;
+
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 1200px) {
+
+  .produtos {
+    grid-template-columns: 1fr;
+  }
+
+
+  .card {
+    grid-template-columns: 40% 60%;
+  }
+
+
+  .imagem {
+    min-height: 250px;
+  }
+
+
+  .beneficios {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+  }
+
+
+  .separador {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .section {
+    width: calc(100% - 30px);
+
+    padding: 28px 20px;
+  }
+
+
+  .cabecalho h2 {
+    font-size: 22px;
+  }
+
+
+  .verTodos {
+    display: none;
+  }
+
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+
+  .imagem {
+    height: 230px;
+  }
+
+
+  .informacoes {
+    padding: 20px;
+  }
+
+
+  .beneficios {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    padding: 25px 10px 5px;
+  }
+
+}

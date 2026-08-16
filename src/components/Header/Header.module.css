@@ -1,0 +1,118 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 3.5px 2rem;
+
+  box-sizing: border-box;
+
+  font-weight: 600;
+
+  background-color: #fff;
+
+  box-shadow: 0 5px 8px -7px #6D4029;
+
+  z-index: 9999;
+}
+
+.header > img {
+  display: block;
+  object-fit: contain;
+}
+
+/* MENU */
+
+.menu {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7rem;
+}
+
+.menu a {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  color: #6D4029;
+
+  padding: 8px 0;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+/* BARRINHA QUE DESLIZA */
+
+.indicator {
+  position: absolute;
+
+  bottom: 0;
+
+  height: 3px;
+
+  padding: 0;
+
+  background-color: #ff4d00;
+
+  border-radius: 20px;
+
+  pointer-events: none;
+
+  transition:
+    left 0.4s ease,
+    width 0.4s ease;
+}
+
+/* PEDIR AGORA */
+
+.pedir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  background-color: var(--laranja);
+
+  border-radius: 25px;
+
+  padding: 10px 16px;
+
+  cursor: pointer;
+
+  width: fit-content;
+}
+
+.pedir a {
+  text-decoration: none;
+
+  color: #fff;
+
+  line-height: 1;
+}
+
+.pedir img {
+  width: 23px;
+  height: 23px;
+
+  object-fit: contain;
+
+  filter: brightness(0) invert(1);
+}
