@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./MaisVendidos.module.css";
 import { IoBagHandleOutline } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 const produtos = [
   {
@@ -199,14 +200,14 @@ const MaisVendidos = () => {
 
         </div>
 
-        <a
-          href="/doces"
+        <NavLink
+          to="/doces"
           className={styles.verTodos}
         >
           VER TODOS
 
           <span>→</span>
-        </a>
+        </NavLink>
       </div>
 
       {/* =========================

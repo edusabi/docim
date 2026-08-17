@@ -65,7 +65,7 @@ const Header = () => {
 
       <span className={styles.pedir}>
         <img src="/zap.png" alt="WhatsApp" />
-        <a href="#">PEDIR AGORA</a>
+        <a href="https://wa.me/5581995735689">PEDIR AGORA</a>
       </span>
     </div>
   );

@@ -3,13 +3,15 @@ import styles from "./Home.module.css";
 import Categorias from "../../components/MaisVendidos/MaisVendidos";
 import Kits from "../../components/Kits/Kits";
 import Footer from "../../components/Footer/Footer";
+import { NavLink } from "react-router-dom";
+
+import { MdArrowRightAlt } from "react-icons/md";
 
 const Home = () => {
   
   return (
     <div>
-      <Header/>
-
+      
        <section className={styles.hero}>
 
       <div className={styles.conteudo}>
@@ -36,10 +38,10 @@ const Home = () => {
             mais para adoçar seus melhores momentos.
           </p>
 
-          <a href="/doces" className={styles.botao}>
+          <NavLink to="/doces" className={styles.botao}>
             CONHEÇA NOSSOS DOCES
-            <span>→</span>
-          </a>
+            <span><MdArrowRightAlt/></span>
+          </NavLink>
         </div>
 
         <div className={styles.imagem}>

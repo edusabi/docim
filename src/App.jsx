@@ -1,30 +1,27 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"; 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import './App.css';
+import "./App.css";
 
-///components
+import Header from "./components/Header/Header";
 
-//pages
 import Home from "./pages/Home/Home";
 import Doces from "./pages/Doces/Doces";
+import Kits from "./pages/Kits/Kits";
+import Sobre from "./pages/Sobre/Sobre";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-      
-        <Routes>
+    <BrowserRouter>
+      <Header />
 
-          <Route path="/" element={<Home/>}/>
-          <Route path="/doces" element={<Doces/>}/>
-          {/* <Route path="/kits" element={<Home/>}/>
-          <Route path="/sobre" element={<Home/>}/> */}
-
-        </Routes>
-
-      </BrowserRouter>
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/doces" element={<Doces />} />
+        <Route path="/kits" element={<Kits />} />
+        <Route path="/sobre" element={<Sobre />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

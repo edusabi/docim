@@ -62,25 +62,20 @@
 
 .indicator {
   position: absolute;
-
   bottom: 0;
 
   height: 3px;
-
   padding: 0;
 
   background-color: #ff4d00;
-
   border-radius: 20px;
 
   pointer-events: none;
 
   transition:
-    left 0.4s ease,
-    width 0.4s ease;
+    left 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* PEDIR AGORA */
 
 .pedir {
   display: flex;
@@ -89,15 +84,32 @@
 
   gap: 7px;
 
-  background-color: var(--laranja);
-
-  border-radius: 25px;
-
+  width: fit-content;
   padding: 10px 16px;
+
+  background-color: var(--laranja);
+  border-radius: 25px;
 
   cursor: pointer;
 
-  width: fit-content;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.pedir:hover {
+  transform: translateY(-3px);
+
+  background-color: #ed4700;
+
+  box-shadow:
+    0 10px 25px
+    rgba(255, 77, 0, 0.22);
+}
+
+.pedir:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .pedir a {

@@ -11,7 +11,6 @@ const Footer = () => {
 
       <div className={styles.footerContent}>
         
-        {/* MARCA */}
         <div className={styles.brandInfo}>
           <img
             src="/logoFooter.png"
@@ -27,7 +26,6 @@ const Footer = () => {
         </div>
 
 
-        {/* CONTATO */}
         <div className={styles.contato}>
           <h3>FALE CONOSCO</h3>
 
@@ -38,7 +36,7 @@ const Footer = () => {
 
           <a
             href="https://www.instagram.com/_.docim"
-            target="_blank"
+            target="_self"
             rel="noreferrer"
           >
             <FaInstagram />
